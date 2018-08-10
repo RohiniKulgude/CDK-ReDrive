@@ -1,0 +1,40 @@
+<ion-view title="Vehicle Details" id="page7" style="background-color:#7ECC4B;">
+  <ion-content padding="true" class="has-header" ng-controller="vehicleDetailsCtrl">
+    <div id="vehicleDetails-button-bar2" class="button-bar"></div>
+    <ion-slides disable-side-menu-drag="" options="{'loop': true}" slider="slider2" delegate-handle="slider2" id="vehicleDetails-slider2" style="width:100%;height:200px;">
+      <ion-slide-page id="vehicleDetails-slide27" style="background:url({{c.thumbnail}}) no-repeat center;background-size:cover;"></ion-slide-page>
+      <ion-slide-page id="vehicleDetails-slide28" ng-repeat="photo in photos" style="background:url({{photo}}) no-repeat center;background-size:cover;"></ion-slide-page>
+      <!--<ion-slide-page id="vehicleDetails-slide29" style="background:url({{photo2}}) no-repeat center;background-size:cover;"></ion-slide-page>-->
+    </ion-slides>
+    <ion-list id="vehicleDetails-list8">
+      <div class="item item-body" id="vehicleDetails-list-item-container2">
+        <div id="vehicleDetails-markdown4" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">VIN &emsp; : {{c.vin}}</p>
+        </div>
+        <div id="vehicleDetails-markdown5" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Make &nbsp; : {{c.make}}</p>
+        </div>
+        <div id="vehicleDetails-markdown6" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Model : {{c.model}}</p>
+        </div>
+        <div id="vehicleDetails-markdown7" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Age &ensp;&nbsp; : {{2018 - c.year}} years</p>
+        </div>
+        <div id="vehicleDetails-markdown8" class="show- list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Miles &nbsp; : {{c.miles}}</p>
+        </div>
+        <div id="vehicleDetails-markdown9" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Price &nbsp; : ${{c.price}}</p>
+        </div>
+        <div id="vehicleLikes">
+          <i class="icon ion-thumbsup" style="right: 11px;padding-bottom:70px;color: lightseagreen;font-size:20px">&emsp;{{c.likes}}</i>
+        </div>
+        <div id="vehicleDislikes">
+          <i class="icon ion-thumbsdown" style="right: 11px;padding-top:70px;font-size:20px">&emsp;{{c.dislikes}}</i>
+        </div>
+      </div>
+    </ion-list>
+    <button ng-click="getHistory(c.serv_hist)" id="vehicleDetails-button17" class="button button-positive button-block">Get Service History</button>
+    <!--<a ui-sref="d_Menu.serviceHistory()" id="vehicleDetails-button17" class="button button-balanced button-block">Get Service History</a>-->
+  </ion-content>
+</ion-view>

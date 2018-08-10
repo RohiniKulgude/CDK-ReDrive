@@ -1,0 +1,33 @@
+<ion-view title="Upload Vehicle" id="page9" style="background-color:#7ECC4B;">
+  <ion-content padding="true" class="has-header" ng-controller="uploadVehicleCtrl">
+    <form id="uploadVehicle-form8" class="list">
+      <label class="item item-input" id="uploadVehicle-input16">
+        <span class="input-label">VIN</span>
+        <input type="text" placeholder="" ng-model="vin">
+      </label>
+      <div ng-show="isVinAvailable(vin)">
+        <label class="item item-input" id="uploadVehicle-input18">
+          <span class="input-label">Make</span>BMW
+          <input type="text" placeholder="">
+        </label>
+        <label class="item item-input" id="uploadVehicle-input19">
+          <span class="input-label">Model</span>X5
+          <input type="text" placeholder="">
+        </label>
+        <label class="item item-input" id="uploadVehicle-input20">
+          <span class="input-label">Year</span>2005
+          <input type="text" placeholder="">
+        </label>
+      </div>
+      <label class="item item-input" id="uploadVehicle-input17">
+        <span class="input-label">PRICE</span>
+        <input type="text" placeholder="">
+      </label>
+    </form>
+    <button id="uploadVehicle-button18" style="border-radius:60px 60px 60px 60px;" class="button button-light button-block" ng-click="captureImage()">Upload Photo</button>
+    <div id="uploadVehicle-button-bar5" class="button-bar">
+      <a ui-sref="d_Menu.inventory()" id="uploadVehicle-button28" class="button button-positive button-block">SAVE</a>
+      <a ui-sref="d_Menu.home()" id="uploadVehicle-button29" class="button button-light button-block">CANCEL</a>
+    </div>
+  </ion-content>
+</ion-view>

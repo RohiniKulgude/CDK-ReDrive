@@ -1,0 +1,19 @@
+<ion-view title="Service History" id="page8" style="background-color:#7ECC4B;">
+  <ion-content padding="true" class="has-header" ng-controller="serviceHistoryCtrl">
+    <div class="row header" style="border: solid 1px grey;border-right: solid 1px grey;">
+      <div class="col"><b>Service Date</b></div>
+      <div class="col"><b>Description</b></div>
+      <div class="col"><b>Technician Comment</b></div>
+    </div>
+    <div class="row" style="border: solid 1px grey;border-right: solid 1px grey;" ng-repeat="h in hist">
+      <div class="col">{{h.closedDate}}</div>
+      <div class="col">{{h.desc}}</div>
+      <div class="col">{{h.techComment}}</div>
+    </div>
+    <!--<div class="row" style="border: solid 1px grey;border-right: solid 1px grey;">
+      <div class="col">01-May-2016</div>
+      <div class="col">Accident</div>
+      <div class="col">Repaired</div>
+    </div>-->
+  </ion-content>
+</ion-view>

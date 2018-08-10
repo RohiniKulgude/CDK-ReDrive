@@ -1,0 +1,14 @@
+{
+  "name": "redrive",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ],
+  "gulpStartupTasks": ["sass", "watch"]
+}

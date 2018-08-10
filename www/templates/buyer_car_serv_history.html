@@ -1,0 +1,19 @@
+<ion-view title="Service History" id="c_page8" style="background-color:#7ECC4B;">
+  <ion-content padding="true" class="has-header" ng-controller="buyer_car_serv_historyCtrl">
+    <div class="row header" style="border: solid 1px grey;border-right: solid 1px grey;">
+      <div class="col"><b>Service Date</b></div>
+      <div class="col"><b>Description</b></div>
+      <div class="col"><b>Technician Comment</b></div>
+    </div>
+    <div class="row" style="border: solid 1px grey;border-right: solid 1px grey;" ng-repeat="h in hist">
+      <div class="col">{{h.closedDate}}</div>
+      <div class="col">{{h.desc}}</div>
+      <div class="col">{{h.techComment}}</div>
+    </div>
+    <h4 id="buyer_car_serv_history-heading2" style="color:#000000;text-align:center;">Contact Dealer</h4>
+    <div id="buyer_car_serv_history-button-bar2" class="button-bar">
+      <a href="tel:+918959317903" id="buyer_car_serv_history-button12" class="button button-positive button-block icon ion-ios-telephone-outline"></a>
+      <a href="mailto:Shannon.Dsilva@cdk.com" id="buyer_car_serv_history-button13" class="button button-positive button-block icon ion-android-mail"></a>
+    </div>
+  </ion-content>
+</ion-view>

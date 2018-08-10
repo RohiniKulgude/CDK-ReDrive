@@ -1,0 +1,24 @@
+<ion-view title="Signup" id="page5" style="background-color:#7ECC4B;">
+  <ion-content padding="true" class="has-header" ng-controller="signupCtrl">
+    <form id="signup-form2" class="list" ng-submit="signup()">
+      <ion-list id="signup-list3">
+        <label class="item item-input" id="signup-input3">
+          <span class="input-label">Name</span>
+          <input type="text" placeholder="" ng-model="user.name" required autocorrect="off" autocapitalize="off">
+        </label>
+        <label class="item item-input" id="signup-input4">
+          <span class="input-label">Email</span>
+          <input type="email" placeholder="" ng-model="user.email" required autocorrect="off" autocapitalize="off">
+        </label>
+        <label class="item item-input" id="signup-input5">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="" ng-model="user.password" required autocorrect="off" autocapitalize="off">
+        </label>
+      </ion-list>
+      <div class="spacer" style="height: 30px;"></div>
+      <ion-radio ng-model="role" id="signup-radio3" name="Role_type" ng-value="'dealer'" ng-required="true">I'm a Dealer</ion-radio>
+      <ion-radio ng-model="role" id="signup-radio4" name="Role_type" ng-value="'buyer'" ng-required="true">I'm a Buyer</ion-radio>
+      <button type="submit" id="signup-button3" class="button button-stable button-block">Sign up</button>
+    </form>
+  </ion-content>
+</ion-view>

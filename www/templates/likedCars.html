@@ -1,0 +1,25 @@
+<ion-view title="Liked Cars" id="c_page2" style="background-color:#7ECC4B;">
+  <ion-content padding="true" class="has-header" ng-controller="likedCarsCtrl" ng-init="load()">
+    <ion-list id="inventory-list6">
+      <div id="likedCars-markdown7" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">List of
+          <strong>Liked Cars</strong>
+        </p>
+      </div>
+      <ion-item class="item-thumbnail-left item-icon-right" id="inventory-list-item10" ng-repeat="c in cars" ng-click="goToDetails(c)">
+        <img src={{c.thumbnail}}>
+        <h2>{{c.make}}</h2>
+        <p ng-model="model">{{c.model}}</p>
+        <p>Year of Mfg : {{c.year}}</p>
+        <p>Miles &emsp; &emsp;&nbsp;      : {{c.miles}}</p>
+        <p>Price   &emsp; &emsp;&nbsp;    : ${{c.price}}</p>
+        <div id="vehicleLikes">
+          <i class="icon ion-thumbsup" style="right: 11px;padding-bottom:70px;color: lightseagreen;font-size:20px">{{c.likes}}</i>
+        </div>
+        <div id="vehicleDislikes">
+          <i class="icon ion-thumbsdown" style="right: 11px;padding-top:70px;font-size:20px">{{c.dislikes}}</i>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

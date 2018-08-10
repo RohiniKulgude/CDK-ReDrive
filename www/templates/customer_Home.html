@@ -1,0 +1,31 @@
+<ion-view title="Customer_Home" cache-view="false" id="c_page1" style="background-color:#7ECC4B;" >
+  <ion-content padding="true" no-scroll>
+    <ion-pane ng-controller="customer_HomeCtrl">
+      <ion-header-bar class="bar-calm">
+        <h1 class="title">Let's Redrive</h1>
+      </ion-header-bar>
+
+      <td-cards>
+        <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)"
+                 on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)"
+                 on-partial-swipe="cardPartialSwipe(amt)">
+          <div class="title">
+            <div class="row header">
+              <div class="col">{{card.make}}  {{card.model}}</div>
+              <div class="col">Age : {{2018 - card.year}} years</div>
+            </div>
+            <div class="row header">
+              <div class="col">Miles : {{card.miles}}</div>
+              <div class="col">Price : ${{card.price}}</div>
+            </div>
+          </div>
+          <div class="image">
+            <div class="no-text overlayBox"><div class="noBox boxed">Dislike</div></div>
+            <img ng-src="{{card.thumbnail}}">
+            <div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Like</div></div>
+          </div>
+        </td-card>
+      </td-cards>
+    </ion-pane>
+  </ion-content>
+</ion-view>

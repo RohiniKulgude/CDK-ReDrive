@@ -1,0 +1,46 @@
+<ion-view title="Car Details" id="c_page7" style="background-color:#7ECC4B;">
+  <ion-content padding="true" class="has-header" ng-controller="liked_Car_DetailsCtrl">
+
+    <ion-slides disable-side-menu-drag="" options="{'loop': true}" slider="slider2" delegate-handle="slider2" id="liked_Car_Details-slider2" style="width:100%;height:200px;">
+      <ion-slide-page id="liked_Car_Details-slide210" style="background:url({{c.thumbnail}}) no-repeat center;background-size:cover;"></ion-slide-page>
+      <ion-slide-page id="liked_Car_Details-slide211" ng-repeat="photo in photos" style="background:url({{photo}}) no-repeat center;background-size:cover;"></ion-slide-page>
+      <!--<ion-slide-page id="liked_Car_Details-slide212" style="background:url(&quot;img/WE6rB9dZRTiIWQlP5qsA_kitten3.jpg&quot;) no-repeat center;background-size:cover;"></ion-slide-page>-->
+    </ion-slides>
+
+    <ion-list id="vehicleDetails-list8">
+      <div class="item item-body" id="vehicleDetails-list-item-container2">
+
+        <div id="vehicleDetails-markdown5" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Make &nbsp; : {{c.make}}</p>
+        </div>
+        <div id="vehicleDetails-markdown6" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Model : {{c.model}}</p>
+        </div>
+        <div id="vehicleDetails-markdown7" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Age &ensp;&nbsp; : {{2018 - c.year}} years</p>
+        </div>
+        <div id="vehicleDetails-markdown8" class="show- list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Miles &nbsp; : {{c.miles}}</p>
+        </div>
+        <div id="vehicleDetails-markdown9" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Price &nbsp; : ${{c.price}}</p>
+        </div>
+        <div id="vehicleLikes">
+          <i class="icon ion-thumbsup" style="right: 11px;padding-bottom:70px;color: lightseagreen;font-size:20px">&emsp;{{c.likes}}</i>
+        </div>
+        <div id="vehicleDislikes">
+          <i class="icon ion-thumbsdown" style="right: 11px;padding-top:70px;font-size:20px">&emsp;{{c.dislikes}}</i>
+        </div>
+
+      </div>
+    </ion-list>
+
+    <button ng-click="getHistory(c.serv_hist)" id="vehicleDetails-button17" class="button button-balanced button-block">Get Service History</button>
+
+    <h4 id="liked_Car_Details-heading1" style="color:#000000;text-align:center;">Contact Dealer</h4>
+    <div id="liked_Car_Details-button-bar1" class="button-bar">
+      <a href="tel:+919765353667" id="liked_Car_Details-button6" style="font-weight:lighter;" class="button button-positive button-block icon ion-ios-telephone-outline"></a>
+      <a href="mailto:Shannon.Dsilva@cdk.com" id="liked_Car_Details-button7" style="font-weight:lighter;" class="button button-stable button-block icon ion-android-mail"></a>
+    </div>
+  </ion-content>
+</ion-view>

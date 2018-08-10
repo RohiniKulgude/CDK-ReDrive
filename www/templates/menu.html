@@ -1,0 +1,26 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content drag-content="false">
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button></ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="c_side-menu21"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left" id="c_side-menu21" style="background-color:#7ECC4B;" swipeEnabled="false">
+    <ion-header-bar class="bar-stable">
+      <div class="title">Menu</div>
+    </ion-header-bar>
+    <ion-content padding="false" class="side-menu-left has-header ">
+      <ion-list id="menu-list1">
+        <ion-item id="menu-list-item1" ui-sref="menu.customer_Home()" menu-close="">Home</ion-item>
+        <ion-item id="menu-list-item2" ui-sref="menu.likedCars()" menu-close="">Liked Cars</ion-item>
+        <ion-item id="menu-list-item3" ui-sref="preferences()" menu-close="">Preferences</ion-item>
+        <ion-item id="menu-list-item4" ui-sref="menu.profile()" menu-close="">Profile</ion-item>
+        <ion-item id="menu-list-item5" ui-sref="menu.about()" menu-close="">About</ion-item>
+        <ion-item id="menu-list-item6" ui-sref="login()" menu-close="">Logout</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
